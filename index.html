@@ -5,14 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/main.css">
-    <script src="./dist/main.js"></script>
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="./dist/main.css"> -->
+    <!-- <script src="./dist/main.js"></script> -->
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
     <title>CryptoGraph</title>
   </head>
 
   <body>
     <main id="main"></main>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script>
+      let myChart = document.getElementById('myChart').getContext('2d');
+
+      let mainChart = new Chart(myChart, {
+        type:'line',
+        data:{
+          labels:['Bitcoin', 'Ethereum', 'Tether', 'USD Coin', 'Binance Coin'],
+          datasets:[{
+            label:'Currency',
+            data:[31608.95, 1952.76, 0.9994, 1.00, 318.71]
+          }]
+        }
+      })
+    </script>
+
   </body>
 
 </html>
-
