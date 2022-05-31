@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-    <!-- <link rel="stylesheet" href="./dist/main.css"> -->
-    <!-- <script src="./dist/main.js"></script> -->
+    <link rel="stylesheet" href="./dist/main.css">
+    <script src="./dist/main.js"></script>
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -24,18 +24,35 @@
     </div>
 
     <script>
-      let myChart = document.getElementById('myChart').getContext('2d');
-
-      let mainChart = new Chart(myChart, {
-        type:'line',
+      const data = {
+        'Flow': 2.73,
+        'Ape Coin': 6.86,
+        'Axie Infinity': 24.22,
+        'The Sandbox': 1.45,
+        'Decentraland': 1.09
+      }
+      const ctx = document.getElementById('myChart').getContext('2d');
+      const myChart = new Chart(ctx, {
+        type:'bar',
         data:{
-          labels:['Bitcoin', 'Ethereum', 'Tether', 'USD Coin', 'Binance Coin'],
+          labels: Object.keys(data),
           datasets:[{
-            label:'Currency',
-            data:[31608.95, 1952.76, 0.9994, 1.00, 318.71]
+            label:'USD',
+            data: Object.values(data),
           }]
+        },
+        options: {
+          title:{
+            display:true,
+            text:'Most Popular Non-Fungible Tokens (NFT)',
+            fontSize:25
+          },
+          backgroundColor:['green', 'blue', 'teal', 'purple', 'pink'],
+          borderWidth:1,
+          borderColor:'grey',
+          hoverBorderWidth:2,
         }
-      })
+      });
     </script>
 
   </body>
