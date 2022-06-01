@@ -1,9 +1,6 @@
-import Example from "./scripts/example";
-import myChart from "./scripts/nft_chart";
+// import MainChart from "./scripts/main_chart"
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log('Hello World');
-  const main = document.getElementById("main")
-  new Example(main)
-  const ctx = document.getElementById('myChart').getContext('2d');
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   const main = document.getElementById("main")
+//   const mainChart = new MainChart(main);
+// });

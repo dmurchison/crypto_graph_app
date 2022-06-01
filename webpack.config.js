@@ -1,9 +1,18 @@
 // webpack.config.js
+const webpack = require("webpack")
 
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
+  resolve: {
+    fallback: { 
+      "url": require.resolve("url/"),
+      "https": require.resolve("https-browserify"),
+      "http": require.resolve("stream-http"),
+      "buffer": require.resolve("buffer/")
+    }
+  },
   entry: [
     path.resolve(__dirname, 'src', 'index.js'),
     path.resolve(__dirname, 'src', 'index.scss')
@@ -32,7 +41,15 @@ const config = {
       }
     ]
   },
-  plugins: [new MiniCssExtractPlugin()]
+  plugins: [
+    new webpack.ProvidePlugin({
+            Buffer: ['buffer', 'Buffer'],
+        }),
+        new webpack.ProvidePlugin({
+            process: 'process/browser',
+        }),
+    new MiniCssExtractPlugin()
+  ]
 };
 
 module.exports = (env, argv) => {
