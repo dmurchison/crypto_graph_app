@@ -72,6 +72,8 @@ class MainChart {
     gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
     gradient.addColorStop(1, 'rgba(0, 0, 0, 0.3)');
 
+    let delayed;
+
     const labels = ['Cardano', 'Iota', 'Nano', 'Power-Ledger', 'Stellar'];
     const data = {
       labels,
@@ -82,12 +84,8 @@ class MainChart {
           label: "Crypto's",
           fill: true,
           backgroundColor: gradient,
-          borderColor: 'black',
-          pointRadius: [20, 20, 20, 20],
-          pointHoverRadius: 20,
-          pointHitRadius: 20,
           pointStyle: [ada, miota, xno, powr, xlm],
-          pointBackgroundColor: 'white',
+          tension: 0.5,
         },
       ],
     };
@@ -95,7 +93,22 @@ class MainChart {
       type: "line",
       data: data,
       options: {
+        radius: 5,
+        hitRadius: 30,
+        hoverRadius: 12,
         responsive: true,
+        animation: {
+          onComplete: () => {
+            delayed = true;
+          },
+          delay: (context) => {
+            let delay = 0;
+            if (context.type === 'data' && context.mode === 'default' && !delayed) {
+              delay = context.dataIndex * 300 + context.datasetIndex * 100;
+            }
+            return delay;
+          },
+        },
         scales: {
           y: {
             ticks: {

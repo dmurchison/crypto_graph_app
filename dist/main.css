@@ -15,10 +15,10 @@ h1 {
 
 .myChart {
   padding: 5%;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 60%;
+  height: 85%;
   width: 75%;
 }
 
@@ -32,11 +32,18 @@ h1 {
 }
 
 #textbox {
-  padding: 5%;
-  height: 400px;
-  width: 300px;
+  margin-right: 2%;
+  padding: 1%;
+  justify-content: center;
+  position: relative;
+  height: 500px;
+  width: 350px;
   border-style: solid;
   border-color: black;
+  overflow: scroll;
+  font-size: large;
+  font-style: oblique;
+  background: radial-gradient(circle at bottom, rgb(255, 255, 0) 0, rgb(255, 255, 255) 100%);
 }
 
 body {
