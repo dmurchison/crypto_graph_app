@@ -2,19 +2,45 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 h1 {
-  color: rgb(0, 255, 0);
+  color: navy;
   text-align: center;
   padding: 25;
   font-family: bombshell pro;
   font-size: 50px;
 }
 
-.mainChart {
-  font-size: 50;
+#cardano {
+  display: none;
+}
+
+.myChart {
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60%;
+  width: 75%;
+}
+
+#main {
+  width: 0;
+}
+
+#center {
+  display: flex;
+  flex-direction: row;
+}
+
+#textbox {
+  padding: 5%;
+  height: 400px;
+  width: 300px;
+  border-style: solid;
+  border-color: black;
 }
 
 body {
-  background: radial-gradient(circle at bottom, navy 0, black 100%);
+  background: radial-gradient(circle at bottom, rgb(0, 255, 0) 0, rgb(255, 255, 255) 100%);
   height: 100vh;
   overflow: hidden;
 }
