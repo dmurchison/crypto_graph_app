@@ -1,6 +1,8 @@
-// import MainChart from "./scripts/main_chart"
+import MainChart from './scripts/main_chart';
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const main = document.getElementById("main")
-//   const mainChart = new MainChart(main);
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  const main = document.getElementById("main")
+  const chart = new MainChart(main);
+  chart.getData();
+  chart.createChart();
+});

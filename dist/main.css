@@ -9,6 +9,10 @@ h1 {
   font-size: 50px;
 }
 
+.mainChart {
+  font-size: 50;
+}
+
 body {
   background: radial-gradient(circle at bottom, navy 0, black 100%);
   height: 100vh;

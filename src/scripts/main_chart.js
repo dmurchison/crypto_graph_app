@@ -1,44 +1,66 @@
 import Chart from 'chart.js/auto';
-import CoinGecko from 'coingecko-api';
+const CoinGecko = require('coingecko-api');
 
 class MainChart {
   constructor(el) {
     this.el = el;
-    this.el.inner
+    this.el.innerHTML = "<canvas>mainChart</canvas>";
   }
+
+  getData() {
+    const CoinGeckoClient = new CoinGecko();
+    let data = CoinGeckoClient.simple.price({
+      ids: ['cardano', 'iota', 'nano', 'power-ledger', 'stellar'],
+    })
+    data.then(data => {
+      const coins = [];
+      const temp = [];
+      let dataKey = data.data;
+      for (let key in dataKey) {
+        coins.push(key);
+        temp.push(dataKey[key]);
+      }
+      let prices = [];
+      temp.forEach(price => {
+        prices.push(Object.values(price));
+      });
+      prices = prices.flat(Infinity);
+      console.log(coins);
+      console.log(prices);
+    });
+    // const func = async() => {
+    //   let data = await CoinGeckoClient.coins.fetch('power-ledger');
+    //   return data;
+    // };
+    //   for (let key in dataKey) {
+    //     const coinObj = dataKey[key];
+    //   }
+    // });
+  };
+
+  createChart() {
+    const ctx = document.getElementById('mainChart').getContext('2d');
+    const graph = new Chart(ctx, {
+      type:'bar',
+      data:{
+        labels: ['cardano', 'iota', 'nano', 'power-ledger', 'stellar'],
+        datasets: [{
+          label:'Top 5 Environmentally Friendly CryptoCurrencies',
+          data: [0.555117, 0.137137, 1.17, 0.332455, 0.28136],
+          backgroundColor: ['green', 'blue', 'teal', 'purple', 'pink'],
+          autoPadding: true,
+          label: {
+            font: {
+              size: 30,
+            }
+          }
+        }]
+      },
+    });
+  }
+  
 }
 
 
 
-
-// const data = {
-//   'Flow': 2.73,
-//   'Ape Coin': 6.86,
-//   'Axie Infinity': 24.22,
-//   'The Sandbox': 1.45,
-//   'Decentraland': 1.09
-// }
-// const ctx = document.getElementById('myChart').getContext('2d');
-// const myChart = new Chart(ctx, {
-//   type:'bar',
-//   data:{
-//     labels: Object.keys(data),
-//     datasets:[{
-//       label:'USD',
-//       data: Object.values(data),
-//     }]
-//   },
-//   options: {
-//     title:{
-//       display:true,
-//       text:'Most Popular Non-Fungible Tokens (NFT)',
-//       fontSize:25
-//     },
-//     // backgroundColor:['green', 'blue', 'teal', 'purple', 'pink'],
-//     // borderWidth:1,
-//     // borderColor:'grey',
-//     // hoverBorderWidth:2,
-//   }
-// });
-
-// export default myChart;
+export default MainChart;
