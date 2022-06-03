@@ -12,7 +12,6 @@ class MainChart {
     let data = CoinGeckoClient.simple.price({
       ids: ['cardano', 'iota', 'nano', 'power-ledger', 'stellar'],
     })
-    // debugger
     const cryptoPrices = data.then(data => {
       const coins = [];
       const temp = [];
@@ -26,29 +25,14 @@ class MainChart {
         prices.push(Object.values(price));
       });
       prices = prices.flat(Infinity);
-      // console.log(prices);
       return prices;
     });
 
     return cryptoPrices;
-    // const func = async() => {
-    //   let data = await CoinGeckoClient.coins.fetch('power-ledger');
-    //   return data;
-    // };
-    //   for (let key in dataKey) {
-    //     const coinObj = dataKey[key];
-    //   }
-    // });
   };
 
   async createChart() {
-
-    // let test = async () => {
-    //   const data = await this.getData();
-    //   return data;
-    // }
-    // console.log(test());
-    
+    // Create thumbnail images for the linechart points
     const ada = new Image();
     ada.src = "https://assets.coingecko.com/coins/images/975/thumb/cardano.png?1547034860";
 
@@ -64,22 +48,21 @@ class MainChart {
     const xlm = new Image();
     xlm.src = "https://assets.coingecko.com/coins/images/100/thumb/Stellar_symbol_black_RGB.png?1552356157";
 
-
+    // Context for the chart.js library
     const ctx = document.getElementById('mainChart').getContext('2d');
-
+    
     // Gradient Fill:
     let gradient = ctx.createLinearGradient(0, 0, 0, 400);
     gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
     gradient.addColorStop(1, 'rgba(0, 0, 0, 0.3)');
-
-    let delayed;
-
+    
+    
+    // Chart.js data:
     const labels = ['Cardano', 'Iota', 'Nano', 'Power-Ledger', 'Stellar'];
     const data = {
       labels,
       datasets: [
         {
-          // data: prices,
           data: await this.getData(),
           label: "Crypto's",
           fill: true,
@@ -89,6 +72,7 @@ class MainChart {
         },
       ],
     };
+    let delayed; // setting var for animation function
     const config = {
       type: "line",
       data: data,
@@ -123,10 +107,7 @@ class MainChart {
 
     const myChart = new Chart(ctx, config);
   }
-  
 
 };
-
-
 
 export default MainChart;
