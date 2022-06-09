@@ -10,9 +10,12 @@ class MainChart {
   getData() {
     const CoinGeckoClient = new CoinGecko();
     let data = CoinGeckoClient.simple.price({
-      ids: ['cardano', 'iota', 'nano', 'power-ledger', 'stellar'],
+      ids: ['polkadot', 'cardano', 'dogecoin', 'solana'],
     })
+    console.log(data);
+    
     const cryptoPrices = data.then(data => {
+      console.log(data[key])
       const coins = [];
       const temp = [];
       let dataKey = data.data;
@@ -33,20 +36,18 @@ class MainChart {
 
   async createChart() {
     // Create thumbnail images for the linechart points
+
+    const dot = new Image();
+    dot.src = "https://assets.coingecko.com/coins/images/12171/thumb/polkadot.png?1639712644";
+
     const ada = new Image();
     ada.src = "https://assets.coingecko.com/coins/images/975/thumb/cardano.png?1547034860";
 
-    const miota = new Image();
-    miota.src = "https://assets.coingecko.com/coins/images/692/thumb/IOTA_Swirl.png?1604238557";
+    const doge = new Image();
+    doge.src = "https://assets.coingecko.com/coins/images/5/thumb/dogecoin.png?1547792256";
 
-    const xno = new Image();
-    xno.src = "https://assets.coingecko.com/coins/images/756/thumb/nano.png?1637232468";
-
-    const powr = new Image();
-    powr.src = "https://assets.coingecko.com/coins/images/1104/thumb/power-ledger.png?1547035082";
-
-    const xlm = new Image();
-    xlm.src = "https://assets.coingecko.com/coins/images/100/thumb/Stellar_symbol_black_RGB.png?1552356157";
+    const sol = new Image();
+    sol.src = "https://assets.coingecko.com/coins/images/4128/thumb/solana.png?1640133422";
 
     // Context for the chart.js library
     const ctx = document.getElementById('mainChart').getContext('2d');
@@ -58,16 +59,16 @@ class MainChart {
     
     
     // Chart.js data:
-    const labels = ['Cardano', 'Iota', 'Nano', 'Power-Ledger', 'Stellar'];
+    const labels = ['Polkadot', 'Cardano', 'DogeCoin', 'Solana'];
     const data = {
       labels,
       datasets: [
         {
-          data: await this.getData(),
-          label: "Crypto's",
+          data: [0.796, 0.5479, 0.12, 0.00051],
+          label: "KWH Per Blockchain Transaction",
           fill: true,
           backgroundColor: gradient,
-          pointStyle: [ada, miota, xno, powr, xlm],
+          pointStyle: [dot, ada, doge, sol],
           tension: 0.5,
         },
       ],
@@ -77,9 +78,9 @@ class MainChart {
       type: "line",
       data: data,
       options: {
-        radius: 5,
-        hitRadius: 30,
-        hoverRadius: 12,
+        radius: 10,
+        hitRadius: 50,
+        hoverRadius: 15,
         responsive: true,
         animation: {
           onComplete: () => {
@@ -97,7 +98,7 @@ class MainChart {
           y: {
             ticks: {
               callback: function(value) {
-                return '$' + value;
+                return value;
               }
             }
           }
