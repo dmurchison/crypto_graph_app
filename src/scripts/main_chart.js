@@ -65,7 +65,7 @@ class MainChart {
       datasets: [
         {
           data: [0.796, 0.5479, 0.12, 0.00051],
-          label: "KWH Per Blockchain Transaction",
+          label: "kWh Per Blockchain Transaction",
           fill: true,
           backgroundColor: gradient,
           pointStyle: [dot, ada, doge, sol],

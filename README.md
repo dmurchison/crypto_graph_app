@@ -1,15 +1,13 @@
-CRYPTO GRAPH
+# CRYPTO GRAPH #
 
-**Background**
-   CryptoGraph is a single page website to accurately display the pricing data 
-for The Top 5 crypto currencies. There will be features to view the history and
-development information of the currency and a hover feature on the main line
-chart. Icons will be used to change the currency data on the chart.
-   The goal of this webpage is to allow people to read about and understand the
-top crypto currencies and a brief history of each currency without having to do 
-extensive searches throughout multiple sites on the web. Blockchain technology 
-is a topic that isn’t necessarily easy to understand, and I think my app will 
-allow people to do just that.
+![CryptoGraph Webpage](Screen Shot 2022-06-10 at 10.30.20 AM.png "CryptoGraph Webpage")
+
+## Background ##
+CryptoGraph is a single page data visualition web application made to accurately
+display the kWh (Kilowatts per Hour) per transaction. ( https://en.wikipedia.org/wiki/Kilowatt-hour )
+for Cardano, Polkadot, Dogecoin and Solana which aim to have some of the most
+environmentally friendly blockchain transactions and still have some lucrative
+market data.
 
 **Functionality & MVPs**
 In CryptoGraph, users will be able to:
