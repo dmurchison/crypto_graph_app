@@ -78,9 +78,9 @@ class MainChart {
       type: "line",
       data: data,
       options: {
-        radius: 10,
-        hitRadius: 50,
-        hoverRadius: 15,
+        radius: 25,
+        hitRadius: 10,
+        hoverRadius: 10,
         responsive: true,
         animation: {
           onComplete: () => {

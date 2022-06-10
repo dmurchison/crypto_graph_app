@@ -1,20 +1,18 @@
-
 h1 {
-  color: navy;
+  color: black;
   text-align: center;
   padding: 25;
   font-family: bombshell pro;
   font-size: 50px;
+  border: 2px solid black;
+  background-color: lightblue;
 }
 
 .myChart {
-  padding: 5%;
+  padding: 2%;
   position: relative;
-  display: flex;
-  align-items: center;
-  // justify-content: center;
-  height: 85%;
-  width: 75%;
+  justify-content: left;
+  width: 650px;
 }
 
 #main {
@@ -26,14 +24,15 @@ h1 {
   flex-direction: row;
 }
 
-#textbox {
+#textBox {
   // display: flex;
   margin-right: 2%;
+  margin-top: 20%;
   padding: 1%;
   justify-content: center;
   position: relative;
-  height: 500px;
-  width: 350px;
+  height: 200px;
+  width: 600px;
   border-style: solid;
   border-color: black;
   overflow: scroll;
@@ -55,121 +54,22 @@ body {
 
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 10px;
+  position: relative;
+  justify-content: end;
+  background-color: lightblue; 
+  // left: 0;
+  margin-bottom: 0%;
   width: 100%;
   background-color: rgba(255, 255, 255, 0) center / 200px 200px round;
-  // border: 2px dashed;
+  border: 2px solid;
   text-align: center;
 }
 
-address {
-  position: fixed;
-  bottom: 10px;
-  left: 10px
-}
-
-.stars1 {
-  background-image:
-    radial-gradient(
-      1px 1px at 25px 5px,
-      black,
-      rgb(255, 255, 255)
-    ),
-    radial-gradient(
-      1px 1px at 50px 25px,
-      black,
-      rgb(255, 255, 255)
-    ),
-    radial-gradient(
-      1px 1px at 125px 20px,
-      black,
-      rgb(255, 255, 255)
-    ),
-    radial-gradient(
-      1.5px 1.5px at 50px 75px,
-      black,
-      rgb(255, 255, 255)
-    ),
-    radial-gradient(
-      2px 2px at 15px 125px,
-      black,
-      rgb(255, 255, 255)
-    ),
-    radial-gradient(
-      2.5px 2.5px at 110px 80px,
-      black,
-      rgb(255, 255, 255)
-    );
-}
-
-.stars2 {
-  background-image:
-    radial-gradient(
-      1px 1px at 75px 125px,
-      white,
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      1px 1px at 100px 75px,
-      white,
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      1.5px 1.5px at 199px 100px,
-      white,
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      2px 2px at 20px 50px,
-      white,
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      2.5px 2.5px at 100px 5px,
-      white,
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      2.5px 2.5px at 5px 5px,
-      white,
-      rgba(255, 255, 255, 0)
-    );
-}
-
-.stars3 {
-  background-image:
-    radial-gradient(
-      1px 1px at 10px 10px,
-      white,
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      1px 1px at 150px 150px,
-      white,
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      1.5px 1.5px at 60px 170px,
-      white,
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      1.5px 1.5px at 175px 180px,
-      white,
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      2px 2px at 195px 95px,
-      white,
-      rgba(255, 255, 255, 0)
-    ),
-    radial-gradient(
-      2.5px 2.5px at 95px 145px,
-      white,
-      rgba(255, 255, 255, 0)
-    );
+#widget {
+  width: 600px;
+  height: 500px;
+  justify-content: baseline;
+  position: relative;
 }
   
 #main {

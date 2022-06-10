@@ -9,51 +9,49 @@
     <link rel="stylesheet" href="./dist/main.css">
     <script src="./dist/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
+    <script src="https://widgets.coingecko.com/coingecko-coin-compare-chart-widget.js"></script>
 
     <title>Top Environmentally Friendly CryptoCurrencies</title>
   </head>
 
   <body>
-    <h1>Environmentally Friendly CryptoCurrencies</h1>
-
+    <h1>Eco-Freindly Blockchain Transactions</h1>
     <div id="center">
-
+      
       <main id="main"></main>
 
       <div class="myChart">
         <canvas id="mainChart" width="75" height="25"></canvas>
+        <div id="textBox">
+          "Some cryptocurrencies are inherently more energy efficient than Bitcoin. 
+          Why? Because Bitcoin relies on a 'Proof of Work' system that involves huge amounts of calculations 
+          (and, thus, processing power) to produce a single token. Cryptocurrencies that instead use a 'Proof of Storage' or 'Proof of Stake' 
+          system use far less energy, as do currencies using a technology called block lattice, which doesn't require mining.
+          Even among 'Proof of Work' cryptocurrencies, however, some are more energy intensive than others. 
+          This is primarily because these currencies use ASIC-resistant algorithms that consume significantly more energy than should be expected 
+          relative to how much of the cryptocurrency market they represent. 
+          A good example of this is RavenCoin which, by one calculation, accounts for 4.32% of the total rated power of the 
+          top 20 cryptocurrencies but has a market capitalization of just 0.06%. Interestingly, 
+          Bitcoin uses an algorithm that does allow for mining ASIC-based devices, and these devices are considerably more energy efficient 
+          than conventional graphic processing units (GPUs)."
+          <br>
+          <br>
+          Article by: Leigh Matthews
+          <br>
+          <br>
+          <a href="https://www.leafscore.com/blog/the-9-most-sustainable-cryptocurrencies-for-2022/">Article Link</a>
+        </div>
       </div>
 
-      <div id="textbox">
-        "Some cryptocurrencies are inherently more energy efficient than Bitcoin. 
-        Why? Because Bitcoin relies on a 'Proof of Work' system that involves huge amounts of calculations 
-        (and, thus, processing power) to produce a single token. Cryptocurrencies that instead use a 'Proof of Storage' or 'Proof of Stake' 
-        system use far less energy, as do currencies using a technology called block lattice, which doesn't require mining.
-        Even among 'Proof of Work' cryptocurrencies, however, some are more energy intensive than others. 
-        This is primarily because these currencies use ASIC-resistant algorithms that consume significantly more energy than should be expected 
-        relative to how much of the cryptocurrency market they represent. 
-        A good example of this is RavenCoin which, by one calculation, accounts for 4.32% of the total rated power of the 
-        top 20 cryptocurrencies but has a market capitalization of just 0.06%. Interestingly, 
-        Bitcoin uses an algorithm that does allow for mining ASIC-based devices, and these devices are considerably more energy efficient 
-        than conventional graphic processing units (GPUs)."
-        <br>
-        <br>
-        Article by: Leigh Matthews
-        <br>
-        <br>
-        <a href="https://www.leafscore.com/blog/the-9-most-sustainable-cryptocurrencies-for-2022/">Article Link</a>
+      
+      <div id="widget">
+        <coingecko-coin-compare-chart-widget  coin-ids="polkadot,cardano,dogecoin,solana" currency="usd" locale="en"></coingecko-coin-compare-chart-widget>
       </div>
-
     </div>
 
     
     
     <footer class="footer">
-      
-      <div class="stars1"></div>
-      <div class="stars2"></div>
-      <div class="stars3"></div>
 
       <address>
         Author: Duncan Murchison
