@@ -1,6 +1,7 @@
 # CRYPTO GRAPH #
 
-![CryptoGraph Webpage](file:///Users/duncanmurch/Desktop/Screen%20Shot%202022-06-10%20at%2010.30.20%20AM.png "CryptoGraph Webpage")
+<img width="1680" alt="Screen Shot 2022-06-10 at 10 30 20 AM" src="https://user-images.githubusercontent.com/80483775/173092872-f1aed1c2-5442-4240-8dc3-6cb2592f3c61.png">
+
 
 ## Background ##
 CryptoGraph is a single page data visualition web application made to accurately
