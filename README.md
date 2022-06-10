@@ -1,6 +1,6 @@
 # CRYPTO GRAPH #
 
-![CryptoGraph Webpage](Screen Shot 2022-06-10 at 10.30.20 AM.png "CryptoGraph Webpage")
+![CryptoGraph Webpage](file:///Users/duncanmurch/Desktop/Screen%20Shot%202022-06-10%20at%2010.30.20%20AM.png "CryptoGraph Webpage")
 
 ## Background ##
 CryptoGraph is a single page data visualition web application made to accurately
