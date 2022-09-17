@@ -1,79 +1,48 @@
 h1 {
-  color: black;
+  padding: 60px;
   text-align: center;
-  padding: 25;
-  font-family: bombshell pro;
-  font-size: 50px;
-  border: 2px solid black;
-  background-color: lightblue;
-}
-
-.myChart {
-  padding: 2%;
-  position: relative;
-  justify-content: left;
-  width: 650px;
-}
-
-#main {
-  width: 0;
-}
-
-#center {
-  display: flex;
-  flex-direction: row;
-}
-
-#textBox {
-  // display: flex;
-  margin-right: 2%;
-  margin-top: 20%;
-  padding: 1%;
-  justify-content: center;
-  position: relative;
-  height: 200px;
-  width: 600px;
-  border-style: solid;
-  border-color: black;
-  overflow: scroll;
-  font-size: large;
-  font-style: oblique;
-  background: radial-gradient(circle at bottom, rgb(255, 255, 0) 0, rgb(255, 255, 255) 100%);
+  background: rgb(0, 125, 80);
+  color: white;
+  font-size: 30px;
 }
 
 body {
-  background: radial-gradient(circle at bottom, rgb(0, 255, 0) 0, rgb(255, 255, 255) 100%);
-  height: 100vh;
-  overflow: hidden;
+  background-color: black;
 }
 
-#imageLinks img {
-  height: 50px;
-  width: 50px;
+.widget {
+  margin-top: 50px;
 }
-
 
 .footer {
-  position: relative;
-  justify-content: end;
-  background-color: lightblue; 
-  // left: 0;
-  margin-bottom: 0%;
+  position: fixed;
+  left: 0;
+  height: 50px;
+  bottom: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0) center / 200px 200px round;
-  border: 2px solid;
+  background-color: black;
   text-align: center;
 }
 
-#widget {
-  width: 600px;
-  height: 500px;
-  justify-content: baseline;
-  position: relative;
+.footer-devLinks {
+  display: flex;
+  justify-content: space-around;
 }
-  
-#main {
-  z-index: 1;
-  position: relative;
-  color: white;
+
+.footer-dev-info {
+  padding: 1px;
+  font-weight: 600;
+  margin-top: 5px;
 }
+
+.devLink {
+  transition: 325ms;
+}
+.devLink:hover {
+  transform: scale(1.05);
+}
+
+.center {
+  margin-bottom: 100px;
+}
+

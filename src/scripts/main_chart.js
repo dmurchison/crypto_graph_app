@@ -7,15 +7,14 @@ class MainChart {
     this.el.innerHTML = "<canvas>mainChart</canvas>";
   }
 
+  // Get all of the data needed to render the chart
   getData() {
     const CoinGeckoClient = new CoinGecko();
     let data = CoinGeckoClient.simple.price({
       ids: ['polkadot', 'cardano', 'dogecoin', 'solana'],
     })
-    console.log(data);
-    
+
     const cryptoPrices = data.then(data => {
-      console.log(data[key])
       const coins = [];
       const temp = [];
       let dataKey = data.data;
@@ -23,6 +22,7 @@ class MainChart {
         coins.push(key);
         temp.push(dataKey[key]);
       }
+
       let prices = [];
       temp.forEach(price => {
         prices.push(Object.values(price));
@@ -36,10 +36,9 @@ class MainChart {
 
   async createChart() {
     // Create thumbnail images for the linechart points
-
     const dot = new Image();
     dot.src = "https://assets.coingecko.com/coins/images/12171/thumb/polkadot.png?1639712644";
-
+    
     const ada = new Image();
     ada.src = "https://assets.coingecko.com/coins/images/975/thumb/cardano.png?1547034860";
 
@@ -54,8 +53,8 @@ class MainChart {
     
     // Gradient Fill:
     let gradient = ctx.createLinearGradient(0, 0, 0, 400);
-    gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
-    gradient.addColorStop(1, 'rgba(0, 0, 0, 0.3)');
+    gradient.addColorStop(1, 'rgba(0, 125, 80, 1)');
+    gradient.addColorStop(0, 'rgba(25, 155, 255, 0.75)');
     
     
     // Chart.js data:
@@ -105,10 +104,10 @@ class MainChart {
         }
       }
     }
-
     const myChart = new Chart(ctx, config);
   }
 
 };
 
 export default MainChart;
+

@@ -5,73 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="stylesheet" href="./dist/main.css">
     <script src="./dist/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://widgets.coingecko.com/coingecko-coin-compare-chart-widget.js"></script>
-
+    
     <title>Top Eco-Friendly CryptoCurrencies</title>
   </head>
 
   <body>
     <h1>Eco-Friendly Blockchain Transactions</h1>
-    <div id="center">
-      
-      <main id="main"></main>
 
+    <div class="center">  
       <div class="myChart">
-        <canvas id="mainChart" width="75" height="25"></canvas>
-        <div id="textBox">
-          "Some cryptocurrencies are inherently more energy efficient than Bitcoin. 
-          Why? Because Bitcoin relies on a 'Proof of Work' system that involves huge amounts of calculations 
-          (and, thus, processing power) to produce a single token. Cryptocurrencies that instead use a 'Proof of Storage' or 'Proof of Stake' 
-          system use far less energy, as do currencies using a technology called block lattice, which doesn't require mining.
-          Even among 'Proof of Work' cryptocurrencies, however, some are more energy intensive than others. 
-          This is primarily because these currencies use ASIC-resistant algorithms that consume significantly more energy than should be expected 
-          relative to how much of the cryptocurrency market they represent. 
-          A good example of this is RavenCoin which, by one calculation, accounts for 4.32% of the total rated power of the 
-          top 20 cryptocurrencies but has a market capitalization of just 0.06%. Interestingly, 
-          Bitcoin uses an algorithm that does allow for mining ASIC-based devices, and these devices are considerably more energy efficient 
-          than conventional graphic processing units (GPUs)."
-          <br>
-          <br>
-          Article by: Leigh Matthews
-          <br>
-          <br>
-          <a href="https://www.leafscore.com/blog/the-9-most-sustainable-cryptocurrencies-for-2022/">Article Link</a>
-        </div>
+        <canvas id="mainChart" width="75" height="35">
+          <main id="main"></main>
+        </canvas>
       </div>
 
-      
-      <div id="widget">
+      <div class="widget">
         <coingecko-coin-compare-chart-widget  coin-ids="polkadot,cardano,dogecoin,solana" currency="usd" locale="en"></coingecko-coin-compare-chart-widget>
       </div>
     </div>
 
-    
-    
     <footer class="footer">
-
-      <address>
-        Author: Duncan Murchison
-        <br>
-        Technologies:
-        Vanilla JS | CSS | HTML | Chart.js | CoinGecko API
-      </address>
-      
-      <div id="imageLinks">
-        <a href="https://github.com/dmurchison">
-          <img src="https://cdn-icons-png.flaticon.com/128/1051/1051377.png">
+      <div class="footer-devLinks">
+        <a class="devLink" href="https://dmurchison.github.io/portfolio_site/#/" target="_blank">
+          <img src="https://img.icons8.com/nolan/50/internet.png"/>    
         </a>
-  
-        <a href="https://www.linkedin.com/in/duncan-murchison/">
-          <img src="https://cdn-icons-png.flaticon.com/128/1051/1051384.png">
+
+        <a class="devLink" href="https://www.linkedin.com/in/duncan-murchison/"target="_blank">
+          <img src="https://img.icons8.com/nolan/50/linkedin-circled.png"/>
+        </a>
+
+        <a class="devLink" href="https://github.com/dmurchison" target="_blank">
+          <img src="https://img.icons8.com/nolan/50/github.png"/>        
+        </a>
+
+        <a class="devLink" href="https://angel.co/u/duncan-murchison" target="_blank">
+          <img src="https://img.icons8.com/nolan/50/angelist.png"/>        
         </a>
       </div>
-
-      
     </footer>
+
   </body>
-  
 </html>
+    

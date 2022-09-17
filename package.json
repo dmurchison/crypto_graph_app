@@ -26,7 +26,6 @@
     "chart.js": "^3.8.0",
     "coingecko-api": "^1.0.10",
     "core-js": "^3.22.7",
-    "css-loader": "^6.7.1",
     "http": "^0.0.1-security",
     "https": "^1.0.0",
     "https-browserify": "^1.0.0",
@@ -43,5 +42,9 @@
   "browserslist": [
     "defaults"
   ],
-  "devDependencies": {"process": "^0.11.10"}
+  "devDependencies": {
+    "css-loader": "^6.7.1",
+    "process": "^0.11.10",
+    "style-loader": "^3.3.1"
+  }
 }
