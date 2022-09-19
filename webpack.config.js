@@ -1,16 +1,15 @@
 // webpack.config.js
-const webpack = require("webpack")
-
+const webpack = require('webpack')
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const config = {
   resolve: {
     fallback: { 
-      "url": require.resolve("url/"),
-      "https": require.resolve("https-browserify"),
-      "http": require.resolve("stream-http"),
-      "buffer": require.resolve("buffer/")
+      'url': require.resolve('url/'),
+      'https': require.resolve('https-browserify'),
+      'http': require.resolve('stream-http'),
+      'buffer': require.resolve('buffer/')
     }
   },
   entry: [

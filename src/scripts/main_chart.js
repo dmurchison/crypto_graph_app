@@ -11,7 +11,7 @@ class MainChart {
   getData() {
     const CoinGeckoClient = new CoinGecko();
     let data = CoinGeckoClient.simple.price({
-      ids: ['polkadot', 'cardano', 'dogecoin', 'solana'],
+      ids: ["polkadot", "cardano", "dogecoin", "solana"],
     })
 
     const cryptoPrices = data.then(data => {
@@ -49,32 +49,44 @@ class MainChart {
     sol.src = "https://assets.coingecko.com/coins/images/4128/thumb/solana.png?1640133422";
 
     // Context for the chart.js library
-    const ctx = document.getElementById('mainChart').getContext('2d');
+    const ctx = document.getElementById("mainChart").getContext("2d");
     
     // Gradient Fill:
-    let gradient = ctx.createLinearGradient(0, 0, 0, 400);
-    gradient.addColorStop(1, 'rgba(0, 125, 80, 1)');
-    gradient.addColorStop(0, 'rgba(25, 155, 255, 0.75)');
+    let gradient = ctx.createLinearGradient(0, 0, 0, 750);
+    gradient.addColorStop(0, 'rgba(100, 255, 35, 1)');
+    gradient.addColorStop(1, 'rgba(125, 125, 250, 1)');
     
     
     // Chart.js data:
-    const labels = ['Polkadot', 'Cardano', 'DogeCoin', 'Solana'];
     const data = {
-      labels,
-      datasets: [
-        {
-          data: [0.796, 0.5479, 0.12, 0.00051],
-          label: "kWh Per Blockchain Transaction",
-          fill: true,
-          backgroundColor: gradient,
-          pointStyle: [dot, ada, doge, sol],
-          tension: 0.5,
-        },
+      labels: [
+        "Polkadot", 
+        "Cardano", 
+        "DogeCoin", 
+        "Solana"
       ],
+      datasets: [{
+        type: "line",
+        label: "Line kWh Per Blockchain Transaction",
+        data: [0.796, 0.5479, 0.12, 0.00051],
+        fill: false,
+        pointStyle: [dot, ada, doge, sol],
+        tension: 0.5,
+      }, {
+        type: "bar",
+        label: "Bar kWh Per Blockchain Transaction",
+        data: [0.796, 0.5479, 0.12, 0.00051],
+        fill: true,
+        backgroundColor: gradient,
+        pointStyle: [dot, ada, doge, sol],
+        tension: 0.5,
+      }],
     };
-    let delayed; // setting var for animation function
+
+    // setting var for animation function
+    let delayed;
     const config = {
-      type: "line",
+      type: "scatter",
       data: data,
       options: {
         radius: 25,
@@ -87,7 +99,7 @@ class MainChart {
           },
           delay: (context) => {
             let delay = 0;
-            if (context.type === 'data' && context.mode === 'default' && !delayed) {
+            if (context.type === "data" && context.mode === "default" && !delayed) {
               delay = context.dataIndex * 300 + context.datasetIndex * 100;
             }
             return delay;
