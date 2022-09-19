@@ -1,20 +1,58 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-h1 {
-  padding: 60px;
-  text-align: center;
-  background: rgb(0, 125, 80);
-  color: white;
-  font-size: 30px;
+body {
+  background-color: darkgrey;
 }
 
-body {
-  background-color: black;
+.mainHeader {
+  font-family: monospace;
+  font-size: 50px;
+  text-align: center;
+  color: navy;
+}
+
+.articleHeader {
+  text-align: center;
+  color: white;
+}
+
+.article {
+  color: white;
+  background-color: navy;
+  font-family: monospace;
+  border: 5px groove white;
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
+  transition: 325ms;
+}
+
+.article:hover {
+  transform: scale(1.015);
+}
+
+.articleLink {
+  color: white;
+  transform: 325ms;
+}
+
+.articleLink:hover {
+  color: aquamarine;
 }
 
 .widget {
+  border: 5px groove white;
   margin-top: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
+  background-color: navy;
+  transition: 325ms;
+}
+
+.widget:hover {
+  transform: scale(1.015);
 }
 
 .footer {
