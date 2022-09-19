@@ -1,6 +1,6 @@
 # CRYPTO GRAPH #
 
-<img width="1680" alt="Screen Shot 2022-06-10 at 10 30 20 AM" src="https://user-images.githubusercontent.com/80483775/173092872-f1aed1c2-5442-4240-8dc3-6cb2592f3c61.png">
+![crypto-graph](https://user-images.githubusercontent.com/80483775/190944344-1a3dc914-dcd2-4954-bb6d-93756c34c7ed.png)
 
 ## Background ##
 CryptoGraph is a single page data visualition web application made to accurately
