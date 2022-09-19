@@ -10,12 +10,8 @@ environmentally friendly blockchain transactions and still have some lucrative
 market data.
 
 ## Charts ##
-
 ### Market Data ###
-<img width="653" alt="Screen Shot 2022-06-10 at 10 31 57 AM" src="https://user-images.githubusercontent.com/80483775/173094597-1c03c508-1c2c-4b9b-bf98-d2e85cda6d26.png">
-
-### kWh Per Blockchain Transaction ###
-<img width="749" alt="Screen Shot 2022-06-10 at 10 32 58 AM" src="https://user-images.githubusercontent.com/80483775/173094841-d3bcb684-0aa7-4afa-bc69-9a79bae88a67.png">
+![crypto-graph2](https://user-images.githubusercontent.com/80483775/190945060-878a123a-2162-4dda-b19a-365ae745cbe3.png)
 
 
 ## Functionality & MVPs ##
